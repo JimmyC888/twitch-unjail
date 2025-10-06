@@ -55,10 +55,6 @@ namespace TwitchUnjail.Cli {
                     Console.WriteLine("Switching to recovery mode.");
                     /* Retrieve recovery info */
                     recoveryInfo = await StreamsChartsHandler.RetrieveInfo(videoUrl);
-                } else if (File.Exists(videoUrl)) {
-                    Console.WriteLine("Switching to recovery mode.");
-                    /* Retrieve recovery info */
-                    recoveryInfo = await StreamsChartsHandler.RetrieveInfoFromSavedHtml(videoUrl);
                 } else {
                     throw new Exception($"The given url is not a known vod url: '{videoUrl}'");
                 }
@@ -179,10 +175,6 @@ namespace TwitchUnjail.Cli {
                     Console.WriteLine("Switching to recovery mode.");
                     /* Retrieve recovery info */
                     recoveryInfo = await StreamsChartsHandler.RetrieveInfo(videoUrl);
-                } else if (File.Exists(videoUrl)) {
-                    Console.WriteLine("Switching to recovery mode.");
-                    /* Retrieve recovery info */
-                    recoveryInfo = await StreamsChartsHandler.RetrieveInfoFromSavedHtml(videoUrl);
                 } else {
                     throw new Exception($"The given url is not a known vod url: '{videoUrl}'");
                 }

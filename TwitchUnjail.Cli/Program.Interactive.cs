@@ -32,22 +32,17 @@ namespace TwitchUnjail.Cli {
                 
                 VodRecoveryInfo recoveryInfo;
                 if (vodUrl != null && vodUrl.Contains("twitchtracker.com", StringComparison.OrdinalIgnoreCase)) {
-
+                    
                     Console.WriteLine("Switching to recovery mode.");
                     /* Retrieve recovery info */
                     recoveryInfo = await TwitchTrackerHandler.RetrieveInfo(vodUrl);
                 } else if (vodUrl != null && vodUrl.Contains("streamscharts.com", StringComparison.OrdinalIgnoreCase)) {
-
+                    
                     Console.WriteLine("Switching to recovery mode.");
                     /* Retrieve recovery info */
                     recoveryInfo = await StreamsChartsHandler.RetrieveInfo(vodUrl);
-                } else if (vodUrl != null && File.Exists(vodUrl)) {
-
-                    Console.WriteLine("Switching to recovery mode.");
-                    /* Retrieve recovery info */
-                    recoveryInfo = await StreamsChartsHandler.RetrieveInfoFromSavedHtml(vodUrl);
                 } else {
-
+                    
                     throw new Exception($"The given url is not a known vod url: '{vodUrl}'");
                 }
                 
