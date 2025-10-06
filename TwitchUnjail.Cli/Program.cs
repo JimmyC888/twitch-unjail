@@ -56,7 +56,7 @@ namespace TwitchUnjail.Cli {
             var secondOfDayIdentifier =
                 vod.RecordDate.Hour * 3600 + vod.RecordDate.Minute * 60 + vod.RecordDate.Second;
             return FileSystemHelper.StripInvalidChars(
-                $"{vod.RecordDate:dd-MM-yyyy} - {vod.ChannelDisplayName} - {vod.Title} ({secondOfDayIdentifier}).mp4");
+                $"{vod.ChannelDisplayName} - {vod.RecordDate:yyyy-MM-dd} ({secondOfDayIdentifier}) - {vod.BroadcastId} - {vod.Title}.mp4");
         }
         
         /**
@@ -66,7 +66,7 @@ namespace TwitchUnjail.Cli {
             var secondOfDayIdentifier =
                 recoveryInfo.RecordDate.Hour * 3600 + recoveryInfo.RecordDate.Minute * 60 + recoveryInfo.RecordDate.Second;
             return FileSystemHelper.StripInvalidChars(
-                $"{recoveryInfo.RecordDate:dd-MM-yyyy} - {recoveryInfo.ChannelDisplayName} ({secondOfDayIdentifier}).mp4");
+                $"{recoveryInfo.ChannelDisplayName} - {recoveryInfo.RecordDate:yyyy-MM-dd} ({secondOfDayIdentifier}) - {recoveryInfo.BroadcastId} - {recoveryInfo.Title}.mp4");
         }
     }
 }
