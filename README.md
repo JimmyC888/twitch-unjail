@@ -1,5 +1,5 @@
 # TwitchUnjail
-Twitch vod downloader offering good speeds and low cpu utilization. Supports recovering vods using twitchtracker.com or streamscharts.com links.
+Twitch vod downloader offering good speeds and low cpu utilization. Supports recovering vods using twitchtracker.com or streamscharts.com links, including saved HTML exports created via Chrome's "View Source" option.
 
 Application can either be controlled via command line arguments or by entering data interactivly.
 
